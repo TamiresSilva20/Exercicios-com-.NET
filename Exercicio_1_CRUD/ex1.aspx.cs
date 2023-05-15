@@ -54,8 +54,10 @@ namespace Exercicio_1_CRUD
 
 
                 cmd.CommandText = "insert into aluno (cd_aluno, nome, endereço, cidade, idUf, idCurso) values (" + txtRA.Text + ", '" + txtNome.Text + "', '" + txtEndereco.Text + "', '" + txtCidade.Text + "', " + ddlUf.SelectedValue + ", " + ddlCurso.SelectedValue + ")";
-                cmd.CommandType = CommandType.Text; conn.Open();
-                cmd.ExecuteScalar(); lblMensagem.Text = " Registro incluido com sucesso";
+                cmd.CommandType = CommandType.Text; 
+                conn.Open();
+                cmd.ExecuteScalar(); 
+                lblMensagem.Text = " Registro incluido com sucesso";
             }
             conn.Close();
             conn.Dispose();
